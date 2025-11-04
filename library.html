@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Northwest Investment Management - Monthly Reports</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Top Navigation -->
+    <div class="topnav">
+      <a href="/"><img src="images/home.png" alt="" class="Flex-item1" /></a>
+      <a href="/FO_grid.asp"><img src="images/pnl.jpg" alt="" class="Flex-item" /></a>
+      <a href="/portal/#/cb"><img src="images/ccb.jpg" alt="" class="Flex-item" /></a>
+      <a href="/portal/#/jp"><img src="images/jcb.jpg" alt="" class="Flex-item" /></a>
+      <a href="/portal/#/hk"><img src="images/hkcb.png" alt="" class="Flex-item" /></a>
+      <a href="https://dataapi.nimco.com.hk/cb"><img src="images/anal.jpg" alt="" class="Flex-item" /></a>
+      <a href="Library.html"><img src="images/library.jpg" alt="" class="Flex-item" /></a>
+      <a href="/marketing.asp"><img src="images/mkt.png" alt="" class="Flex-item" /></a>
+      <a href="/administration/administration.asp"><img src="../images/mo.jpg" alt="" class="Flex-item" /></a>
+      <a href="/pnl.asp"><img src="images/mobileView.png" alt="" class="Flex-item2" /></a>
+      <img src="images/logo.jpg" width="202px" height="37px" alt="" class="logogphc" />
+    </div>
+	 <nav class="mobile-nav-tabs">
+  <a href="/" class="year-tab">Home</a>
+  <a href="/FO_grid.asp" class="year-tab">PnL</a>
+  <a href="/portal/#/cb" class="year-tab">CB</a>
+  <a href="/portal/#/jp" class="year-tab">Japan</a>
+  <a href="/portal/#/hk" class="year-tab">HK</a>
+  <a href="https://dataapi.nimco.com.hk/cb" class="year-tab">Analysis</a>
+  <a href="Library.html" class="year-tab active">Library</a>
+  <a href="/marketing.asp" class="year-tab">Marketing</a>
+  <a href="/administration/administration.asp" class="year-tab">Middle Office</a>
+  <a href="/pnl.asp" class="year-tab">Mobile View</a>
+</nav>
+	</div>
+
+
+    <!-- Category Tabs -->
+    <nav class="year-tabs">
+      <a href="#" class="year-tab">Presentations</a>
+      <a href="MonthlyReports.html" class="year-tab">Monthly</a>
+      <a href="#" class="year-tab">Quantitative Research</a>
+    </nav>
+
+    <!-- Banner Image -->
+    <div class="category-image">
+      <img src="images/libraryscene.jpg" alt="Library" />
+    </div>
+
+    <!-- Bottom Wrapper with Dark Brown Background -->
+    <div class="bottom-wrapper">
+      <div id="report-gallery">
+       <div class="category-logobrown">
+              <img src="images/logobrown.png" width="558" height="104" alt=""/>
+		  </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; Northwest Investment Management 2025<br />
+    Hong Kong / 11 Kinwick Centre, 32 Hollywood Road, Central, Hong Kong // Tel - +852 3657 5600<br />
+    Northwest Investment Management (Hong Kong) Limited is Licensed by the Securities and Futures Commission
+  </footer>
+
+  <!-- Fancybox PDF Viewer -->
+  <script>
+    Fancybox.bind("[data-fancybox]", {
+      content: function (fancybox, slide) {
+        const iframe = document.createElement("iframe");
+        const base = slide.src.split('#')[0];
+        const params = "#zoom=75&view=FitH&page=1";
+        iframe.src = base + params;
+        iframe.width = "100%";
+        iframe.height = "100%";
+        iframe.style.border = "none";
+        return iframe;
+      },
+      dragToClose: false,
+      animated: true,
+    });
+  </script>
+</body>
+</html>

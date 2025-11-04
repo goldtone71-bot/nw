@@ -1,0 +1,247 @@
+@charset "utf-8";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: 'Roboto Slab', serif;
+  color: #333;
+}
+
+/* Top Navigation Bar */
+.container {
+  max-width: 100%;
+  background: black;
+  padding: 0;
+  height: auto;
+  border: solid 1px white;
+}
+
+.topnav {
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: row wrap;
+    margin: 0px;
+	padding: 0px;
+	}
+   .Flex-item1  {
+    border-left: solid 0px white;
+	}
+	.Flex-item  {
+    border-left: solid 1px white;
+	}
+	
+	
+
+	.Flex-item2  {
+    border-left: solid 1px white;
+	border-right: solid 1px white;	
+	}
+	
+
+.logogphc {
+  margin-left: auto;
+}
+
+.logo {
+  margin-left: auto;
+  width: 202px;
+  height: 37px;
+}
+
+/* Report Grid */
+.report-stack {
+  display: none;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+  padding: 50px;
+  background-color: #d2e4f9;
+  justify-content: center;
+}
+
+.report-stack.active {
+  display: grid;
+}
+
+.report-item {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.report-item img {
+  width: 163px;
+  height: 224px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.report-item img:hover {
+  transform: scale(1.05);
+}
+
+.date-label {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Year Tabs */
+.year-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 20px 50px;
+}
+
+.year-tab {
+  font-size: 18px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.year-tab:hover {
+  background-color: #ddd;
+}
+
+.year-tab.active {
+  background-color: #0077cc;
+  color: #fff;
+  border-color: #0077cc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Category Tabs */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+  text-align: center;
+}
+
+.category-tab {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.category-tab:hover {
+  background-color: #ddd;
+}
+
+.category-tab.active {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+/* Bottom Wrapper with Gradient */
+.bottom-wrapper {
+  background: linear-gradient(to bottom, #4b2e1e 0%, #5c4033 50%, #3e2723 100%);
+  width: 100%;
+  padding: 40px 0;
+  margin: 0;
+}
+
+.category-logobrown {
+  margin-bottom: 30px;
+}
+
+.category-logobrown img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Banner Image */
+.category-image {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.category-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px;
+  border-top: 2px solid #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Hide mobile nav by default */
+.mobile-nav-tabs {
+  display: none;
+}
+
+/* Show mobile tabs and hide image nav on small screens */
+@media screen and (max-width: 768px) {
+  .topnav {
+    display: none !important;
+  }
+
+  .mobile-nav-tabs {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 10px;
+    background-color: #000;
+  }
+
+  .mobile-nav-tabs .year-tab {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .mobile-nav-tabs .year-tab:hover {
+    background-color: #ddd;
+  }
+
+  .mobile-nav-tabs .year-tab.active {
+    background-color: #0077cc;
+    color: #fff;
+    border-color: #0077cc;
+  }
+}
+
+
